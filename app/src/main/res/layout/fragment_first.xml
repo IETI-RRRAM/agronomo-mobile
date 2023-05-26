@@ -11,25 +11,77 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
-        <Button
-            android:id="@+id/button_first"
+        <TextView
+            android:id="@+id/userNameLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/next"
-            app:layout_constraintBottom_toTopOf="@id/textview_first"
+            android:layout_marginTop="68dp"
+            android:labelFor="@+id/textViewUsernameLabel"
+            android:text="User Name"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <EditText
+            android:id="@+id/editTextEmailAddress2"
+            android:layout_width="315dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:labelFor="@id/userNameLabel"
+            app:layout_constraintBottom_toTopOf="@+id/PasswordLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userNameLabel"
+            app:layout_constraintVertical_bias="0.689" />
+
+
         <TextView
-            android:id="@+id/textview_first"
+            android:id="@+id/PasswordLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/lorem_ipsum"
+            android:layout_marginBottom="32dp"
+            android:text="Password"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="315dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="32dp"
+            android:ems="10"
+            android:inputType="textWebPassword"
+            android:labelFor="@id/PasswordLabel"
+            app:layout_constraintBottom_toTopOf="@+id/buttonFirst"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonFirst"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="117dp"
+            android:layout_height="69dp"
+            android:layout_marginBottom="24dp"
+            android:background="#2A715C"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:backgroundTintMode="src_over"
+            android:text="Login"
+            android:textColorHighlight="#2A715C"
+            android:textColorLink="#2A715C"
+            app:iconTint="#2A715C"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_first" />
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
